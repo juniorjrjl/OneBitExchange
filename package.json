@@ -1,5 +1,5 @@
 {
-  "engines":{
+  "engines": {
     "node": ">=12"
   },
   "name": "onebit_exchange",
