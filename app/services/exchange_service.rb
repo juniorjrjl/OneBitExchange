@@ -22,10 +22,11 @@ class ExchangeService
     private 
 
     def get_exchange
-        exchange_api_url = Rails.application.credentials[:currency_api_url]
-        exchange_api_key = Rails.application.credentials[:currency_api_key]
-        url = "#{exchange_api_url}?token=#{exchange_api_key}&currency=#{@source_currency}/#{@target_currency}"
+        exchange_api_url = Rails.application.credentials[:currency_api_url_v2]
+        exchange_api_key = Rails.application.credentials[:currency_api_key_v2]
+        url = "#{exchange_api_url}crypto/converter?pair1=#{@source_currency}&pair2=#{@target_currency}&amount=#{@amount}&access_key=#{exchange_api_key}"
         res = RestClient.get url
-        JSON.parse(res.body)['currency'][0]['value'].to_f
+        JSON.parse(res.body)['response']["price_1x_#{@target_currency}"].to_f
     end
+
 end

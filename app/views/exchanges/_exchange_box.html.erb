@@ -2,9 +2,14 @@
  <div class='card'>
 ​
    <div class='card-header text-center'>
-    Simule sua conversão
+    <div class='col-lg-12'>
+      <%= image_tag 'logo.png', class: 'img-fluid'%>
+    </div>
+    <div class='col-lg-12'>
+      Simule sua conversão
+    </div>
    </div>
-​
+
    <div class='card-block'>
     <%= form_with url: "/convert", method: :get, id: 'exchange_form' do |f| %>
        <div class='local_currency'>
@@ -27,8 +32,12 @@
            <input type='text' id='result' name='result' class='form-control' placeholder='Resultado' readonly>
          </div>
        </div>
-       <div>
-        <%= f.submit "CONVERTER", class: 'btn btn-primary btn-exchange col-md-12' %>
+       <div class='row'>
+        <div class="col-md-1"></div>
+        <%= f.submit "Converter", class: 'btn btn-primary btn-form col-md-4' %>
+        <div class="col-md-2"></div>
+        <%= f.button "Trocar", {class: 'btn btn-primary btn-form col-md-4', id: 'reverse_button'}%>
+        <div class="col-md-1"></div>
        </div>
     <% end %>
    </div>

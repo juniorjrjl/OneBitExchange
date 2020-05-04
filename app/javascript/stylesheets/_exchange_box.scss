@@ -1,6 +1,17 @@
 .exchange_box{
+
+    .form-group {
+        select {
+            border-radius: 25px;
+        }
+        input {
+            border-radius: 25px;
+        }
+    }
+
     .card{
         border: 0;
+        border-radius: 20px;
         
         .card-header{
             background-color: #878d99;
@@ -16,12 +27,17 @@
             .title{
                 color: #878d99;
                 font-weight: 700;
+                text-align: center;
             }
             
-            .btn-exchange{
-                background-color: #5bc0de;
-                border-color: #5bc0de;
-                border-radius: 0;
+            .btn-form{
+                background-color: #2196f3;
+                border-color: #2196f3;
+                border-radius: 25px;
+                &:hover{
+                    color: #878d99;
+                    background-color: #0071ce;
+                }
             }
         }
     }
@@ -52,7 +68,8 @@
         margin-bottom: 20px;
     }
     
-    .btn-exchange {
+    .btn-form {
         font-size: 20px;
+        margin-top: 20px;
     }
 }
