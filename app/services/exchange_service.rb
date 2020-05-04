@@ -12,8 +12,7 @@ class ExchangeService
 
     def call
         begin
-            value = get_exchange
-            value * @amount
+            get_exchange
         rescue RestClient::ExceptionWithResponse => e
             e.response
         end
