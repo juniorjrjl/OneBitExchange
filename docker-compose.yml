@@ -13,6 +13,7 @@ services:
         command: bash start.sh
         ports:
             - "3000:3000"
+            - "1234:1234"
         environment: 
             - DB_PASSWORD=postgres
         volumes: 

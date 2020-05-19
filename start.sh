@@ -1,5 +1,6 @@
 # Instala as Gems
 bundle check || bundle install
-​
 # Roda nosso servidor
-bundle exec puma -C config/puma.rb
+# bundle exec puma -C config/puma.rb
+
+bundle exec rdebug-ide --host 0.0.0.0 --port 1234 --dispatcher-port 26162 -- /onebitexchange/bin/rails s -b 0.0.0.0 -e development
